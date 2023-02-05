@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import CourseItem from '../components/CourseItem'
 import Empty from '../components/Empty'
 
-const Landing = () => {
+const Landing = ({navigation}) => {
 
     const existingCourses = useSelector(state => state.courses.existingCourses);
     
@@ -18,7 +18,10 @@ const Landing = () => {
                         image={item.image}
                         title={item.title}
                         price={item.price}
-                        viewDetails={() => alert('details')}
+                        viewDetails={() => navigation.navigate('Details', {
+                            courseId: item.id,
+                            title: item.title
+                        })}
                         addToCart={() => alert('panier')}
                     />
                 )}
