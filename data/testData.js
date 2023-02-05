@@ -3,7 +3,7 @@ const COURSES = [
     id: '1',
     title: 'Fomation JavaScript Moderne',
     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, consequatur dolor sequi provident possimus sed ad qui ipsum similique odio iste molestias praesentium nemo ut facere, consectetur error in voluptate!',
-    image: 'https://cdn.pixabay.com/photo/2015/04/23/17/41/javascript-736400_960_720.png',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUHrOwyRvPEzqFVAhZQZ5sSqbGYI8lrAtawE2fJHDwIVm8LM9KEGXChiZNFT3q0T8KV6Y&usqp=CAU',
     price: 99.99,
     selected: false,
     instructorId: '1'
@@ -12,7 +12,7 @@ const COURSES = [
     id: '2',
     title: 'Coder facebook avec React JS',
     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, consequatur dolor sequi provident possimus sed ad qui ipsum similique odio iste molestias praesentium nemo ut facere, consectetur error in voluptate!',
-    image: 'https://cdn.pixabay.com/photo/2016/12/22/04/28/facebook-1924510_960_720.png',
+    image: 'https://i.pcmag.com/imagery/articles/04HUXgEu0I3mdCOejOjQpNE-5.fit_lim.v1620748900.jpg',
     price: 49.99,
     selected: false,
     instructorId: '1'
@@ -21,7 +21,7 @@ const COURSES = [
     id: '3',
     title: 'Wordpress pour débutants',
     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, consequatur dolor sequi provident possimus sed ad qui ipsum similique odio iste molestias praesentium nemo ut facere, consectetur error in voluptate!',
-    image: 'https://cdn.pixabay.com/photo/2022/01/16/17/24/wordpress-6942722_960_720.png',
+    image: 'https://www.wppourlesnuls.com/wp-content/uploads/2019/08/WordPress-logotype-alternative-white.png',
     price: 29.49,
     selected: false,
     instructorId: '1'
@@ -30,7 +30,7 @@ const COURSES = [
     id: '4',
     title: 'Maîtiser le logiciel Confluence',
     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, consequatur dolor sequi provident possimus sed ad qui ipsum similique odio iste molestias praesentium nemo ut facere, consectetur error in voluptate!',
-    image: 'https://cdn.pixabay.com/photo/2017/03/08/14/20/flat-2126878_960_720.png',
+    image: 'https://bubbleplan.net/blog/wp-content/uploads/2020/09/confluence-vector-logo.png',
     price: 49.29,
     selected: false,
     instructorId: '1'
@@ -39,7 +39,7 @@ const COURSES = [
     id: '5',
     title: 'Python pour les débutants',
     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, consequatur dolor sequi provident possimus sed ad qui ipsum similique odio iste molestias praesentium nemo ut facere, consectetur error in voluptate!',
-    image: 'https://uploads-ssl.webflow.com/60ec34540d013784844d2ee2/61d42d538aec6733243470a7_Python-logo.png',
+    image: 'https://abstract-technology.fr/media/technology/python-logo.png/@@images/image.png',
     price: 199.99,
     selected: false,
     instructorId: '1'
@@ -48,7 +48,7 @@ const COURSES = [
     id: '6',
     title: 'apprendre CSS3 ',
     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, consequatur dolor sequi provident possimus sed ad qui ipsum similique odio iste molestias praesentium nemo ut facere, consectetur error in voluptate!',
-    image: 'https://cdn.pixabay.com/photo/2022/03/21/21/44/file-7084005_960_720.png',
+    image: 'https://fr.w3docs.com/uploads/media/default/0001/05/6d07a36ebe6d55273b39440f2391f1d7e6d4092a.png',
     price: 9.99,
     selected: false,
     instructorId: '1'
@@ -57,7 +57,7 @@ const COURSES = [
     id: '7',
     title: 'Formation PHP Orienté Objets',
     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, consequatur dolor sequi provident possimus sed ad qui ipsum similique odio iste molestias praesentium nemo ut facere, consectetur error in voluptate!',
-    image: 'https://cdn.pixabay.com/photo/2013/07/12/16/35/php-151199_960_720.png',
+    image: 'https://kinsta.com/fr/wp-content/uploads/sites/4/2020/03/tutoriels-php-1024x512.png',
     price: 29.99,
     selected: false,
     instructorId: '1'
