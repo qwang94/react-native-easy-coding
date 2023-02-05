@@ -1,13 +1,22 @@
 import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native'
 import React, {useEffect} from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { MaterialIcons } from '@expo/vector-icons'
 
 import GlobalStyles from "../styles/GlobalStyles"
+import { addToCart } from '../redux/actions/ActionAddToCart';
+import CartButton from '../components/CartButton';
 
 const CourseDetail = ({navigation, route}) => {
     const courseId = route.params.courseId;
     const selectedCourse = useSelector(state => state.courses.existingCourses.find(course => course.id === courseId));
+
+    const dispatch = useDispatch();
+    const handleAddToCart = () => {
+        dispatch(addToCart(selectedCourse));
+        navigation.goBack();
+        alert('Article ajouté au panier');
+    }
 
     return (
         <View>
@@ -38,13 +47,10 @@ const CourseDetail = ({navigation, route}) => {
                         color={GlobalStyles.white}
                         onPress={() => navigation.goBack()}
                     />
-                    <TouchableOpacity
-                        onPress={() => alert('ajouté au panier')}
-                    >
-                        <View style={styles.btnAddToCart}>
-                            <Text style={styles.btnText}>Ajouter au panier</Text>
-                        </View>
-                    </TouchableOpacity>
+                    <CartButton 
+                        handleOnPress={handleAddToCart}
+                        text='Ajouter au panier'
+                    />
                 </View>
             </View>
         </View>
@@ -90,14 +96,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         paddingHorizontal: 30
-    },
-    btnAddToCart: {
-        borderRadius: 6,
-        paddingVertical: 9,
-        paddingHorizontal: 25,
-        backgroundColor: GlobalStyles.lightOrange
-    },
-    btnText: {fontSize: 19}
+    }
 })
 
 export default CourseDetail

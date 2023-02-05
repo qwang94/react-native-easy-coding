@@ -1,18 +1,26 @@
 import React, { Component } from 'react'
 import { FlatList, Text, View } from 'react-native'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 import CourseItem from '../components/CourseItem'
 import Empty from '../components/Empty'
+import { addToCart } from '../redux/actions/ActionAddToCart'
 
 const Landing = ({navigation}) => {
 
+    const dispatch = useDispatch();
+    const handleAddToCart = (course) => {
+        dispatch(addToCart(course));
+        alert('Article ajouté au panier');
+    }
+
     const existingCourses = useSelector(state => state.courses.existingCourses);
-    
-    if (existingCourses.length) {
+    const courseToDisplay = existingCourses.filter(course => course.selected === false);
+
+    if (courseToDisplay.length) {
         return (
             <FlatList 
-                data={existingCourses}
+                data={courseToDisplay}
                 renderItem={({item}) => (
                     <CourseItem 
                         image={item.image}
@@ -22,7 +30,7 @@ const Landing = ({navigation}) => {
                             courseId: item.id,
                             title: item.title
                         })}
-                        addToCart={() => alert('panier')}
+                        addToCart={() => handleAddToCart(item)}
                     />
                 )}
             />

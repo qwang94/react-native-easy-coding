@@ -27,7 +27,7 @@ const CoursesNavigator = () => {
                 )
             })}
         >
-            <CoursesStackNavigator.Screen name="Landing" component={Landing} />
+            <CoursesStackNavigator.Screen name="Landing" component={Landing} options={{title: 'Accueil'}} />
             <CoursesStackNavigator.Screen 
                 name="Details" 
                 component={CourseDetail} 
