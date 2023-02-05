@@ -1,13 +1,21 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import Empty from '../components/Empty';
 import CartElement from '../components/CartElement';
 import GlobalStyles from '../styles/GlobalStyles';
 import CartButton from '../components/CartButton';
+import { removeFromCart } from '../redux/actions/ActionRemoveFromCart';
 
 const Cart = () => {
     const cart = useSelector(state => state.cart);
+    const dispatch = useDispatch();
+
+    const handleDelete = (courseId) => {
+        dispatch(removeFromCart(courseId));
+        alert('supprimé');
+    }
+
     return (
         <View style={styles.cartContainer}>
             {
@@ -20,7 +28,7 @@ const Cart = () => {
                                 <CartElement 
                                     title={item.title}
                                     price={item.price}
-                                    handleDelete={() => alert('cours supprimé')}
+                                    handleDelete={() => handleDelete(item.id)}
                                 />
                             )}
                         />
