@@ -6,6 +6,7 @@ import CartElement from '../components/CartElement';
 import GlobalStyles from '../styles/GlobalStyles';
 import CartButton from '../components/CartButton';
 import { removeFromCart } from '../redux/actions/ActionRemoveFromCart';
+import { addPayment } from '../redux/actions/ActionPayment';
 
 const Cart = () => {
     const cart = useSelector(state => state.cart);
@@ -14,6 +15,11 @@ const Cart = () => {
     const handleDelete = (courseId) => {
         dispatch(removeFromCart(courseId));
         alert('supprimé');
+    }
+
+    const handlePayment = (cartCourses, total) => {
+        dispatch(addPayment(cartCourses, total));
+        alert('paiement effectué');
     }
 
     return (
@@ -38,7 +44,7 @@ const Cart = () => {
                                 <Text style={styles.cartTotalPrice}> {cart.total.toFixed(2)} €</Text>
                             </Text>
                             <CartButton
-                                handleOnPress={() => alert('payer')}
+                                handleOnPress={() => handlePayment(cart.cartCourses, cart.total)}
                                 containerStyle={styles.btnPayment}
                                 text="Payer"
                             />

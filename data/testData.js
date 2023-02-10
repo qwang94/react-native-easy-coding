@@ -1,7 +1,7 @@
 const COURSES = [
   {
     id: '1',
-    title: 'Fomation JavaScript Moderne',
+    title: 'Formation JavaScript Moderne',
     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, consequatur dolor sequi provident possimus sed ad qui ipsum similique odio iste molestias praesentium nemo ut facere, consectetur error in voluptate!',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUHrOwyRvPEzqFVAhZQZ5sSqbGYI8lrAtawE2fJHDwIVm8LM9KEGXChiZNFT3q0T8KV6Y&usqp=CAU',
     price: 99.99,

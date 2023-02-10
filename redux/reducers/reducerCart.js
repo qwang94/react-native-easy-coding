@@ -1,5 +1,5 @@
 import CartCourse from '../../data/CartCourseModel';
-import { ADD_TO_CART, REMVOE_FROM_CART } from '../constants';
+import { ADD_PAYMENT, ADD_TO_CART, REMVOE_FROM_CART } from '../constants';
 
 const initialState = {
     cartCourses: [], // {idCourse, price, title}
@@ -27,6 +27,8 @@ const reducerCart = (state = initialState, action) => {
                 cartCourses: newCartCourses,
                 total: state.total - coursePrice
             }
+        case ADD_PAYMENT:
+            return initialState;
         default:
             return state;
     }

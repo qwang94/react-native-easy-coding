@@ -2,16 +2,15 @@ import React from "react";
 import { createStackNavigator, Header } from '@react-navigation/stack';
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 
-import Landing from "../screens/Landing";
-import CourseDetail from "../screens/CourseDetail";
+import Payments from "../screens/Payments";
 import GlobalStyles from "../styles/GlobalStyles";
 import CustomHeaderButton from "../components/CustomHeaderButton";
 
-const CoursesStackNavigator = createStackNavigator();
+const PaymentStackNavigator = createStackNavigator();
 
-const CoursesNavigator = () => {
+const PaymentNavigator = () => {
     return (
-        <CoursesStackNavigator.Navigator
+        <PaymentStackNavigator.Navigator
             screenOptions={({navigation}) => ({
                 headerStyle: {backgroundColor: GlobalStyles.green},
                 headerTitleStyle: { fontWeight: "bold"},
@@ -34,14 +33,9 @@ const CoursesNavigator = () => {
                 )
             })}
         >
-            <CoursesStackNavigator.Screen name="Landing" component={Landing} options={{title: 'Catalogue'}} />
-            <CoursesStackNavigator.Screen 
-                name="Details" 
-                component={CourseDetail} 
-                options={({route}) => ({title: route.params.title})}
-            />
-        </CoursesStackNavigator.Navigator>
+            <PaymentStackNavigator.Screen name="Payment" component={Payments} options={{title: 'Mes Achats'}} />
+        </PaymentStackNavigator.Navigator>
     )
 }
 
-export default CoursesNavigator
+export default PaymentNavigator
